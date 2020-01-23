@@ -6,32 +6,40 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour {
 
 
-    [Header("Player Physics")]
+    [Header("Jump")]
 	public float maxJumpHeight = 4;
 	public float minJumpHeight = 1;
 	public float timeToJumpApex = .4f;
-    public float moveSpeed = 6;
-    public float moveSpeedAfterDash;
+
+
+    [Space(10)]
+    [Header("Wall Jump")]
+    
     public float wallSlideSpeedMax = 3;
     public float wallStickTime = .25f;
     public Vector2 wallJumpClimb;
     public Vector2 wallLeap;
     public bool slideOnWall;
 
-
-    [Header("Dash Physics")]
-    public int framesToMaxSpeedDash;
+    #region Dash
+    [Space(10)]
+    [Header("Dash")]
+    public int framesToAccelDash;
+    public int framesToDeccelDash;
+    public int framesToConstantDashDuration;
     public float maxDashSpeed;
     public float startDashSpeed;
-    public int framesToDashDuration;
-    public int framesToDashOnGroundDuration;
     public int framesToRechargeDash;
-    public int framesToDashDecceleration;
-
     public bool decceleratesInDash;
     bool canDash = true;
     bool onDashCooldown;
+    #endregion
 
+    [Space(10)]
+    [Header("Speed")]
+
+    public float moveSpeed = 6;
+    public float moveSpeedAfterDash;
 
     float actualDashSpeed;
     int dashFrame;
@@ -128,12 +136,12 @@ public class Player : MonoBehaviour {
 
     public void CalculateDashVelocity() {
         if (dashState == DashState.accel) {
-            if (dashFrame >= framesToMaxSpeedDash) {
+            if (dashFrame >= framesToAccelDash) {
                 dashFrame = 0;
                 dashState = DashState.continuous;
             }
             else {
-                float diffPerFrame = (maxDashSpeed - startDashSpeed) / framesToMaxSpeedDash;
+                float diffPerFrame = (maxDashSpeed - startDashSpeed) / framesToAccelDash;
                 velocity.x = (startDashSpeed + dashFrame * diffPerFrame ) * dashDirection;
                 dashFrame++;
             }
@@ -141,7 +149,7 @@ public class Player : MonoBehaviour {
         if (dashState == DashState.continuous) {
 
             if (decceleratesInDash) {
-                if (dashFrame >= framesToDashDuration - (framesToMaxSpeedDash * 2)) {
+                if (dashFrame >= framesToConstantDashDuration - (framesToAccelDash * 2)) {
                     dashState = DashState.deccel;
                     dashFrame = 0;
                 }
@@ -151,7 +159,7 @@ public class Player : MonoBehaviour {
                 }
             }
             else {
-                if (dashFrame >= framesToDashDuration - framesToMaxSpeedDash) {
+                if (dashFrame >= framesToConstantDashDuration - framesToAccelDash) {
                     dashState = DashState.none;
                     dashFrame = 0;
                     if (directionalInputs.x == 0)
@@ -169,7 +177,7 @@ public class Player : MonoBehaviour {
         }
         
         if (dashState == DashState.deccel) {
-            if (dashFrame >= framesToMaxSpeedDash) {
+            if (dashFrame >= framesToAccelDash) {
                 dashFrame = 0;
                 dashState = DashState.none;
 
@@ -181,7 +189,7 @@ public class Player : MonoBehaviour {
 
             }
             else {
-                float diffPerFrame = (maxDashSpeed - startDashSpeed) / framesToMaxSpeedDash;
+                float diffPerFrame = (maxDashSpeed - startDashSpeed) / framesToAccelDash;
                 if (dashDirection == 1) {
                     velocity.x = Mathf.Max((maxDashSpeed - dashFrame * diffPerFrame) * dashDirection, dashDirection * moveSpeed);
                 }
