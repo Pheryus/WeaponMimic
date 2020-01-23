@@ -1,0 +1,319 @@
+fileFormatVersion: 2
+guid: 5318894cab8a5a04a82a798ee4be80fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4287003283175978499
+    second: Protag_Idle_0
+  - first:
+      213: 8549705681943767989
+    second: Protag_Idle_1
+  - first:
+      213: 3947123770572810929
+    second: Protag_Idle_2
+  - first:
+      213: 2539903003753815464
+    second: Protag_Idle_3
+  - first:
+      213: 134865182914821932
+    second: Protag_Idle_4
+  - first:
+      213: 4991204168988519950
+    second: Protag_Idle_5
+  - first:
+      213: -1005932767907966969
+    second: Protag_Idle_6
+  - first:
+      213: -3908978374827514263
+    second: Protag_Idle_7
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Protag_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 55
+        width: 24
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.47368422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b40f8daabec9a46980b03f13f5f514
+      internalID: -4287003283175978499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 55
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.47368422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6edeb046b200dbd4a983185c97d27868
+      internalID: 8549705681943767989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 55
+        width: 21
+        height: 38
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0.47368422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3562778130608d4cb92e1a6e5590ad6
+      internalID: 3947123770572810929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 55
+        width: 20
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6, y: 0.47368422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01082ae1c660824e869000e67906a0f
+      internalID: 2539903003753815464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 5
+        width: 22
+        height: 37
+      alignment: 9
+      pivot: {x: 0.6363636, y: 0.4864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4300de74860454282bbfab96033ca5
+      internalID: 134865182914821932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 5
+        width: 21
+        height: 37
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0.4864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504f8b85465a6c04492487e9e91ffdc0
+      internalID: 4991204168988519950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 5
+        width: 21
+        height: 37
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0.4864865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd93e8b84e252f4aa3f0539a9488fbc
+      internalID: -1005932767907966969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Protag_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 5
+        width: 23
+        height: 38
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.47368422}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896fdbcf15395394c9f9d500390ac976
+      internalID: -3908978374827514263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
