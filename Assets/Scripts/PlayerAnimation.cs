@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour
 
 
     private void Update() {
-        if (player.GetVelocity().magnitude < 1f){
+        if (player.GetVelocity().magnitude < .5f){
             anim.SetBool("IsMoving", false);
         }
         else {

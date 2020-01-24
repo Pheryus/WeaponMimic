@@ -10,9 +10,25 @@ public class DebugControl : MonoBehaviour {
 
     public TextMeshProUGUI dash, jump, startDashSpeed, framesConstantDash, framesAccelDash, framesDeccelDash, endDashSpeed;
 
-    private void Update() {
+    public GameObject debugMessages;
 
-		if (Input.GetKeyDown(KeyCode.Alpha1)) {
+    private void Update() {
+        if (Input.GetKey(KeyCode.R)) {
+            SceneManager.LoadScene("Scene");
+        }
+        else if (Input.GetKey(KeyCode.Escape))
+            Application.Quit();
+
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            debugMessages.SetActive(!debugMessages.activeSelf);
+        }
+
+        if (!debugMessages.activeSelf)
+            return;
+
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha1)) {
 			player.framesToAccelDash++;
 		}
 		else if (Input.GetKeyDown(KeyCode.Alpha2)) {
@@ -58,11 +74,7 @@ public class DebugControl : MonoBehaviour {
         }
 
 
-        if (Input.GetKey(KeyCode.R)) {
-            SceneManager.LoadScene("Scene");
-        }
-        else if (Input.GetKey(KeyCode.Escape))
-            Application.Quit();
+
 
         dash.text = "Dash Player Units: " + GetDashDistance().ToString();
         jump.text = "Jump Player Units: " + (player.maxJumpHeight / 1.5f).ToString();
@@ -79,17 +91,23 @@ public class DebugControl : MonoBehaviour {
 		float end = player.maxDashSpeed;
 		float t = player.framesToAccelDash;
 		float accel = (end - start) / t;
-
+        //Debug.Log("accel: " + accel);
 		float dist1 = (end * end - start * start) / (2 * accel);
-
+        //Debug.Log("dist1: " + dist1);
 		float dist2 = end * player.framesToConstantDashDuration;
 
-		start = end;
+		start = player.maxDashSpeed;
 		end = player.moveSpeed;
 		accel = (end - start) / player.framesToDeccelDash;
-		float dist3 = (end * end - start * start) / (2 * accel);
 
-		return (dist1 + dist2 + dist3) * Time.deltaTime;
+        //Debug.Log("dist2: " + dist2);
+
+
+        float dist3 = (end * end - start * start) / (2 * accel);
+
+
+        //Debug.Log("dist3: " + dist3);   
+        return (dist1 + dist2 + dist3) / 60;
 
 	}
 

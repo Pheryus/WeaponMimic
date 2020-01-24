@@ -5,13 +5,38 @@ using System.Collections.Generic;
 [RequireComponent (typeof (Controller2D))]
 public class Player : MonoBehaviour {
 
+    [Header("Player Upgrades")]
+    public bool learnDoubleJump;
+    public bool learnDash;
 
+
+    #region Jump
     [Header("Jump")]
-	public float maxJumpHeight = 4;
+    [Space(10)]
+    public float maxJumpHeight = 4;
 	public float minJumpHeight = 1;
 	public float timeToJumpApex = .4f;
 
 
+    [Range(0,1)]
+    public float doubleJumpStrength;
+
+    float accelerationTimeAirborne = .2f;
+    float accelerationTimeGrounded = .05f;
+
+    float gravity;
+    float maxJumpVelocity;
+    float minJumpVelocity;
+    public float maxFallVelocity;
+
+    public int framesToJumpAfterLeaveGround;
+    int actualFrameLeaveGround;
+
+    bool canDoubleJump;
+
+    #endregion
+
+    #region WallJump
     [Space(10)]
     [Header("Wall Jump")]
     
@@ -20,6 +45,10 @@ public class Player : MonoBehaviour {
     public Vector2 wallJumpClimb;
     public Vector2 wallLeap;
     public bool slideOnWall;
+    bool wallColliding;
+    float timeToWallUnstick;
+    int wallDirX;
+    #endregion
 
     #region Dash
     [Space(10)]
@@ -33,41 +62,38 @@ public class Player : MonoBehaviour {
     public bool decceleratesInDash;
     bool canDash = true;
     bool onDashCooldown;
+    DashState dashState;
+    int dashDirection;
+    enum DashState { none, accel, continuous, deccel };
+    float actualDashSpeed;
+    Vector3 dashDistance = Vector3.zero;
+
+    int dashFrame;
+
     #endregion
 
+    #region Move
     [Space(10)]
     [Header("Speed")]
 
     public float moveSpeed = 6;
     public float moveSpeedAfterDash;
 
-    float actualDashSpeed;
-    int dashFrame;
-    DashState dashState;
-    int dashDirection;
-    enum DashState { none, accel, continuous, deccel };
+    public int framesToStartChangeDirection;
+    int changeDirectionActualFrame = 0;
+    Vector3 velocity;
+    float velocityXSmoothing;
+    #endregion
 
+    Controller2D controller;
 
-    float accelerationTimeAirborne = .2f;
-	float accelerationTimeGrounded = .1f;
-    bool wallColliding;
-    float timeToWallUnstick;
-
-	float gravity;
-	float maxJumpVelocity;
-	float minJumpVelocity;
-	Vector3 velocity;
-	float velocityXSmoothing;
-
-	Controller2D controller;
-
-	Vector2 directionalInputs;
-	
-	int wallDirX;
+    [HideInInspector]
+	public Vector2 directionalInputs;
 
     int playerDirection = 1;
 
     public GameObject playerGhost;
+
 
 	void Start() {
 		controller = GetComponent<Controller2D> ();
@@ -81,7 +107,7 @@ public class Player : MonoBehaviour {
     public void UpdatePhysics() {
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
-        minJumpVelocity = Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
+        minJumpVelocity = 0;//Mathf.Sqrt(2 * Mathf.Abs(gravity) * minJumpHeight);
     }
 
 	void Update() {
@@ -92,15 +118,19 @@ public class Player : MonoBehaviour {
         ResetDash();
 		controller.Move (velocity * Time.deltaTime, directionalInputs);
 
-		if (controller.collisions.above || controller.collisions.below) {
-			if (controller.collisions.slidingDownMaxSlope) {
-				velocity.y += controller.collisions.slopeNormal.y * -gravity * Time.deltaTime;
-			} else {
-				velocity.y = 0;
-			}
-		}
-        
-	}
+		if (controller.collisions.above || controller.collisions.below) velocity.y = 0;
+		
+        UpdateLeaveGroundFrameWindow();
+    }
+
+    void UpdateLeaveGroundFrameWindow() {
+        if (controller.collisions.below) {
+            actualFrameLeaveGround = framesToJumpAfterLeaveGround;
+            canDoubleJump = true;
+        }
+        else if (actualFrameLeaveGround > 0) actualFrameLeaveGround--;
+
+    }
 
     public Vector3 GetVelocity() {
         return velocity;
@@ -124,13 +154,14 @@ public class Player : MonoBehaviour {
     }
 
     public void OnDashInput() {
-        if (dashState == DashState.none && canDash && !onDashCooldown) {
+        if (dashState == DashState.none && canDash && !onDashCooldown && learnDash) {
             dashState = DashState.accel;
             dashDirection = playerDirection;
             velocity = Vector2.zero;
             onDashCooldown = true;
             dashFrame = 0;
             canDash = false;
+            dashDistance = transform.position;
         }
     }
 
@@ -149,7 +180,7 @@ public class Player : MonoBehaviour {
         if (dashState == DashState.continuous) {
 
             if (decceleratesInDash) {
-                if (dashFrame >= framesToConstantDashDuration - (framesToAccelDash * 2)) {
+                if (dashFrame >= framesToConstantDashDuration) {
                     dashState = DashState.deccel;
                     dashFrame = 0;
                 }
@@ -177,7 +208,7 @@ public class Player : MonoBehaviour {
         }
         
         if (dashState == DashState.deccel) {
-            if (dashFrame >= framesToAccelDash) {
+            if (dashFrame >= framesToDeccelDash) {
                 dashFrame = 0;
                 dashState = DashState.none;
 
@@ -186,10 +217,11 @@ public class Player : MonoBehaviour {
                 else {
                     velocity.x = moveSpeed * dashDirection;
                 }
-
+                Debug.Log(Vector3.Distance(transform.position, dashDistance));
             }
             else {
-                float diffPerFrame = (maxDashSpeed - startDashSpeed) / framesToAccelDash;
+                float diffPerFrame = (maxDashSpeed - moveSpeed) / framesToDeccelDash;
+                Debug.Log("diff per frame: " + diffPerFrame);
                 if (dashDirection == 1) {
                     velocity.x = Mathf.Max((maxDashSpeed - dashFrame * diffPerFrame) * dashDirection, dashDirection * moveSpeed);
                 }
@@ -202,11 +234,14 @@ public class Player : MonoBehaviour {
 
 	public void SetDirectionalInput (List<Vector2> input) {
 		directionalInputs = input[input.Count - 1];
-        if (dashState == DashState.none) { 
-            if (directionalInputs.x > 0) { 
+        if (dashState == DashState.none) {
+            if (directionalInputs.x > 0) {
+                if (playerDirection == -1) changeDirectionActualFrame = framesToStartChangeDirection;
+                
                 playerDirection = 1;
             }
-            else if (directionalInputs.x < 0) { 
+            else if (directionalInputs.x < 0) {
+                if (playerDirection == 1) changeDirectionActualFrame = framesToStartChangeDirection;
                 playerDirection = -1;
             }
         }
@@ -227,16 +262,13 @@ public class Player : MonoBehaviour {
 				velocity.y = wallLeap.y;
 			}
 		}
-		if (controller.collisions.below) {
-			if (controller.collisions.slidingDownMaxSlope ) {
-				if (directionalInputs.x != -Mathf.Sign (controller.collisions.slopeNormal.x)) { 
-					velocity.y = maxJumpVelocity * controller.collisions.slopeNormal.y;
-					velocity.x = maxJumpVelocity * controller.collisions.slopeNormal.x;
-				}
-			} else {
-				velocity.y = maxJumpVelocity;
-			}
+		if (actualFrameLeaveGround > 0) {
+			velocity.y = maxJumpVelocity;
 		}
+        else if (learnDoubleJump && canDoubleJump) {
+            canDoubleJump = false;
+            velocity.y = maxJumpVelocity * doubleJumpStrength;
+        }
 	}
 
 	public void OnJumpInputUp() {
@@ -278,14 +310,33 @@ public class Player : MonoBehaviour {
 
 	}
 
-
 	void CalculateVelocity() {
 
-        if (dashState != DashState.none)
-            return;
         float targetVelocityX = directionalInputs.x * moveSpeed;
-        velocity.x = Mathf.SmoothDamp (velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below)?accelerationTimeGrounded:accelerationTimeAirborne);
-		velocity.y += gravity * Time.deltaTime;
 
-	}
+        if (dashState == DashState.none) {
+            if (changeDirectionActualFrame <= 0 || velocity.y != 0) {
+                velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
+                changeDirectionActualFrame = 0;
+            }
+            else
+                changeDirectionActualFrame--;
+
+        }
+
+        float gravity = this.gravity;
+        if (velocity.y  < 0) {
+            //gravity *= 1.3f;
+        }
+
+        if (dashState == DashState.deccel || dashState == DashState.continuous) { 
+		    velocity.y += gravity * 0.5f * Time.deltaTime;
+        }
+        else if (dashState == DashState.none)
+            velocity.y += gravity * Time.deltaTime;
+
+        if (velocity.y < -maxFallVelocity) {
+            velocity.y = -maxFallVelocity;
+        }
+    }
 }
