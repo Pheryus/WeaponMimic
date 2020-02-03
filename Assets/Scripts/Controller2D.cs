@@ -9,6 +9,10 @@ public class Controller2D : RaycastController {
 	[HideInInspector]
 	public Vector2 playerInput;
 
+    public float vectorSize;
+
+    public bool wallCollision;
+
 	public override void Start() {
 		base.Start ();
 		collisions.faceDir = 1;
@@ -51,51 +55,41 @@ public class Controller2D : RaycastController {
 		float rayLength = Mathf.Abs (moveAmount.x) + skinWidth;
 
 		if (Mathf.Abs(moveAmount.x) < skinWidth) {
-			rayLength = 2*skinWidth;
+			rayLength = .2f;
 		}
+
+        bool isCollidingWithWall = false;
 
 		for (int i = 0; i < horizontalRayCount; i ++) {
 			Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
 			rayOrigin += Vector2.up * (horizontalRaySpacing * i);
 			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
 
-			Debug.DrawRay(rayOrigin, Vector2.right * directionX,Color.red);
+			Debug.DrawRay(rayOrigin, Vector2.right * directionX, Color.red);
 
-			if (hit) {
+            RaycastHit2D wallHit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength * 1.5f, collisionMask);
+
+            if (wallHit) {
+                wallCollision = true;
+                isCollidingWithWall = true;
+            }
+
+            if (hit) {
 
 				if (hit.distance == 0) {
 					continue;
 				}
+				
+				moveAmount.x = (hit.distance - skinWidth) * directionX;
+				rayLength = hit.distance;
 
-				float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
-
-				if (i == 0 && slopeAngle <= maxSlopeAngle) {
-					if (collisions.descendingSlope) {
-						collisions.descendingSlope = false;
-						moveAmount = collisions.moveAmountOld;
-					}
-					float distanceToSlopeStart = 0;
-					if (slopeAngle != collisions.slopeAngleOld) {
-						distanceToSlopeStart = hit.distance-skinWidth;
-						moveAmount.x -= distanceToSlopeStart * directionX;
-					}
-					ClimbSlope(ref moveAmount, slopeAngle, hit.normal);
-					moveAmount.x += distanceToSlopeStart * directionX;
-				}
-
-				if (!collisions.climbingSlope || slopeAngle > maxSlopeAngle) {
-					moveAmount.x = (hit.distance - skinWidth) * directionX;
-					rayLength = hit.distance;
-
-					if (collisions.climbingSlope) {
-						moveAmount.y = Mathf.Tan(collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x);
-					}
-
-					collisions.left = directionX == -1;
-					collisions.right = directionX == 1;
-				}
+				collisions.left = directionX == -1;
+				collisions.right = directionX == 1;
 			}
 		}
+
+        if (!isCollidingWithWall)
+            wallCollision = false;
 	}
 
 	void VerticalCollisions(ref Vector2 moveAmount) {
@@ -106,9 +100,9 @@ public class Controller2D : RaycastController {
 
 			Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + moveAmount.x);
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY * vectorSize, rayLength, collisionMask);
 
-			Debug.DrawRay(rayOrigin, Vector2.up * directionY,Color.red);
+			Debug.DrawRay(rayOrigin, Vector2.up * directionY * vectorSize,Color.red);
 
 			if (hit) {
 				if (hit.collider.tag == "Through") {

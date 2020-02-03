@@ -45,9 +45,22 @@ public class Player : MonoBehaviour {
     public Vector2 wallJumpClimb;
     public Vector2 wallLeap;
     public bool slideOnWall;
+    public int frameWindowWallCollision;
+    public int frameWindowChangeWallJump;
+
+    int actualFrameWallCollision;
+
     bool wallColliding;
     float timeToWallUnstick;
     int wallDirX;
+
+    enum WallJump { none, slow, normal, fast};
+
+    WallJump lastWallJump;
+
+    int lastWallJumpDirection;
+    int actualFrameLastWallJump;
+    
     #endregion
 
     #region Dash
@@ -92,12 +105,11 @@ public class Player : MonoBehaviour {
 
     int playerDirection = 1;
 
-    public GameObject playerGhost;
-
+    PlayerGhost playerGhost;
 
 	void Start() {
 		controller = GetComponent<Controller2D> ();
-
+        playerGhost = GetComponent<PlayerGhost>();
 		gravity = -(2 * maxJumpHeight) / Mathf.Pow (timeToJumpApex, 2);
 		maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 		minJumpVelocity = Mathf.Sqrt (2 * Mathf.Abs (gravity) * minJumpHeight);
@@ -121,6 +133,10 @@ public class Player : MonoBehaviour {
 		if (controller.collisions.above || controller.collisions.below) velocity.y = 0;
 		
         UpdateLeaveGroundFrameWindow();
+    }
+
+    public int TotalDashDuration() {
+        return framesToAccelDash + framesToDeccelDash + framesToConstantDashDuration;
     }
 
     void UpdateLeaveGroundFrameWindow() {
@@ -155,6 +171,7 @@ public class Player : MonoBehaviour {
 
     public void OnDashInput() {
         if (dashState == DashState.none && canDash && !onDashCooldown && learnDash) {
+            playerGhost.CreateGhost();
             dashState = DashState.accel;
             dashDirection = playerDirection;
             velocity = Vector2.zero;
@@ -217,11 +234,9 @@ public class Player : MonoBehaviour {
                 else {
                     velocity.x = moveSpeed * dashDirection;
                 }
-                Debug.Log(Vector3.Distance(transform.position, dashDistance));
             }
             else {
                 float diffPerFrame = (maxDashSpeed - moveSpeed) / framesToDeccelDash;
-                Debug.Log("diff per frame: " + diffPerFrame);
                 if (dashDirection == 1) {
                     velocity.x = Mathf.Max((maxDashSpeed - dashFrame * diffPerFrame) * dashDirection, dashDirection * moveSpeed);
                 }
@@ -245,6 +260,18 @@ public class Player : MonoBehaviour {
                 playerDirection = -1;
             }
         }
+        ChangeWallJump();        
+    }
+
+    void ChangeWallJump() {
+        if (actualFrameLastWallJump > 0) {
+            if (lastWallJump == WallJump.slow || lastWallJump == WallJump.normal) {
+                if (lastWallJumpDirection == playerDirection) {
+                    FastWallJump();
+                }
+            }
+            actualFrameLastWallJump--;
+        }
     }
 
     public int GetPlayerDirection() {
@@ -253,14 +280,19 @@ public class Player : MonoBehaviour {
 
 	public void OnJumpInputDown() {
 		if (wallColliding) {
-			if (wallDirX == directionalInputs.x) {
-				velocity.x = -wallDirX * wallJumpClimb.x;
-				velocity.y = wallJumpClimb.y;
+            lastWallJumpDirection = -wallDirX;
+            actualFrameLastWallJump = frameWindowChangeWallJump;
+
+            if (wallDirX == directionalInputs.x) {
+                NormalWallJump();
 			}
+            else if (directionalInputs.x == 0) {
+                SlowWallJump();
+            }
 			else {
-				velocity.x = -wallDirX * wallLeap.x;
-				velocity.y = wallLeap.y;
+                FastWallJump();
 			}
+            return;
 		}
 		if (actualFrameLeaveGround > 0) {
 			velocity.y = maxJumpVelocity;
@@ -271,42 +303,71 @@ public class Player : MonoBehaviour {
         }
 	}
 
+    void NormalWallJump() {
+        
+        velocity.x = -wallDirX * wallJumpClimb.x;
+        velocity.y = wallJumpClimb.y;
+        lastWallJump = WallJump.normal;
+    }
+
+    void SlowWallJump() {
+        velocity.x = -wallDirX * wallJumpClimb.x / 2;
+        velocity.y = wallJumpClimb.y / 2;
+        lastWallJump = WallJump.slow;
+    }
+
+    void FastWallJump() {
+        velocity.x = -wallDirX * wallLeap.x;
+        velocity.y = wallLeap.y;
+        playerGhost.CreateGhost(false);
+        lastWallJump = WallJump.fast;
+    }
+
 	public void OnJumpInputUp() {
 		if (velocity.y > minJumpVelocity) {
 			velocity.y = minJumpVelocity;
 		}
 	}
-		
-
+	
 	void HandleWallSliding() {
 		wallDirX = (controller.collisions.left) ? -1 : 1;
 		wallColliding = false;
-		if ((controller.collisions.left || controller.collisions.right) && !controller.collisions.below && velocity.y < 0) {
-			wallColliding = true;
+        if ((controller.collisions.left || controller.collisions.right || controller.wallCollision || actualFrameWallCollision > 0) && !controller.collisions.below) {
+            wallColliding = true;
+
+            if (!(controller.collisions.left || controller.collisions.right || controller.wallCollision)) {
+                actualFrameWallCollision--;
+            }
+            else {
+                actualFrameWallCollision = frameWindowWallCollision;
+            }   
 
             if (!slideOnWall)
                 return;
 
-			if (velocity.y < -wallSlideSpeedMax) {
-				velocity.y = -wallSlideSpeedMax;
-			}
+            if (velocity.y < -wallSlideSpeedMax) {
+                velocity.y = -wallSlideSpeedMax;
+            }
 
-			if (timeToWallUnstick > 0) {
-				velocityXSmoothing = 0;
-				velocity.x = 0;
+            if (timeToWallUnstick > 0) {
+                velocityXSmoothing = 0;
+                velocity.x = 0;
 
-				if (directionalInputs.x != wallDirX && directionalInputs.x != 0) {
-					timeToWallUnstick -= Time.deltaTime;
-				}
-				else {
-					timeToWallUnstick = wallStickTime;
-				}
-			}
-			else {
-				timeToWallUnstick = wallStickTime;
-			}
+                if (directionalInputs.x != wallDirX && directionalInputs.x != 0) {
+                    timeToWallUnstick -= Time.deltaTime;
+                }
+                else {
+                    timeToWallUnstick = wallStickTime;
+                }
+            }
+            else {
+                timeToWallUnstick = wallStickTime;
+            }
 
-		}
+        }
+        else if (actualFrameWallCollision > 0) {
+            actualFrameWallCollision--;
+        }
 
 	}
 
