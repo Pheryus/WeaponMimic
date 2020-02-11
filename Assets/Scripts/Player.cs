@@ -174,8 +174,6 @@ public class Player : MonoBehaviour {
     }
 
     public bool IsDeccelerating() {
-        Debug.Log("prev x: " + previousVelocity.x);
-        Debug.Log("actual x: " + velocity.x);
         return Mathf.Abs(previousVelocity.x) > Mathf.Abs(velocity.x);
     }
 
@@ -403,19 +401,11 @@ public class Player : MonoBehaviour {
 	void CalculateVelocity() {
 
         float targetVelocityX = directionalInputs.x * moveSpeed;
-        ///If player is walljumping 
-        if (lastWallJump == WallJump.normal) {
 
-            if (IsDeccelerating()) {
-                Debug.Log("desacelerou");
-                lastWallJump = WallJump.none;
-            }
-            else {
-                Debug.Log("n desacelerou");
-            }
-
-            if (Mathf.Sign(targetVelocityX) != Mathf.Sign(velocity.x)) targetVelocityX = 0;
-
+        ///If player is normal walljumping, moving against the jump's direction will not make a difference
+        if (lastWallJump == WallJump.normal && Mathf.Sign(targetVelocityX) != Mathf.Sign(velocity.x)) {
+            targetVelocityX = 0;
+			Debug.Log("aqui");
         }
 
         if (dashState == DashState.none) {
@@ -439,7 +429,14 @@ public class Player : MonoBehaviour {
             velocity.y = -maxFallVelocity;
         }
 
+		if (Mathf.Abs(velocity.x) < wallJumpClimb.x / 2 && lastWallJump == WallJump.normal) {
+			Debug.Log("desacelerou");
+			lastWallJump = WallJump.none;
+		} else {
+			Debug.Log("n desacelerou");
+		}
 
 
-    }
+
+	}
 }
