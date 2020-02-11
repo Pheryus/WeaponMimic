@@ -12,7 +12,8 @@ public class BaseEnemyAction : MonoBehaviour {
 
     public string actionName;
 
-    public HeuristicFunction heuristic;
+	[SerializeField]
+	public HeuristicFunction heuristic;
     
     public FrameChecker actionFrameChecker;
 

@@ -405,7 +405,6 @@ public class Player : MonoBehaviour {
         ///If player is normal walljumping, moving against the jump's direction will not make a difference
         if (lastWallJump == WallJump.normal && Mathf.Sign(targetVelocityX) != Mathf.Sign(velocity.x)) {
             targetVelocityX = 0;
-			Debug.Log("aqui");
         }
 
         if (dashState == DashState.none) {
@@ -430,10 +429,8 @@ public class Player : MonoBehaviour {
         }
 
 		if (Mathf.Abs(velocity.x) < wallJumpClimb.x / 2 && lastWallJump == WallJump.normal) {
-			Debug.Log("desacelerou");
 			lastWallJump = WallJump.none;
 		} else {
-			Debug.Log("n desacelerou");
 		}
 
 

@@ -70,11 +70,13 @@
     <Compile Include="Assets\Scripts\Enemies\HeuristicFunction.cs" />
     <Compile Include="Assets\Scripts\Enemies\TongueAttack.cs" />
     <Compile Include="Assets\Scripts\FrameChecker.cs" />
+    <Compile Include="Assets\Scripts\MinMaxRangeAttribute.cs" />
     <Compile Include="Assets\Scripts\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
     <Compile Include="Assets\Scripts\PlayerGhost.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\RangedFloat.cs" />
     <Compile Include="Assets\Scripts\RaycastController.cs" />
     <Compile Include="Assets\SpritesheetEditor.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
