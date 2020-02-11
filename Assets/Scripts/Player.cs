@@ -107,6 +107,8 @@ public class Player : MonoBehaviour {
 
     PlayerGhost playerGhost;
 
+    Vector2 previousVelocity;
+
 	void Start() {
 		controller = GetComponent<Controller2D> ();
         playerGhost = GetComponent<PlayerGhost>();
@@ -123,8 +125,9 @@ public class Player : MonoBehaviour {
     }
 
 	void Update() {
-        
-		CalculateVelocity ();
+
+
+        CalculateVelocity();
         CalculateDashVelocity();
 	    HandleWallSliding ();
         ResetDash();
@@ -133,6 +136,7 @@ public class Player : MonoBehaviour {
 		if (controller.collisions.above || controller.collisions.below) velocity.y = 0;
 		
         UpdateLeaveGroundFrameWindow();
+        previousVelocity = velocity;
     }
 
     public int TotalDashDuration() {
@@ -167,6 +171,12 @@ public class Player : MonoBehaviour {
                 onDashCooldown = false;
             }
         }
+    }
+
+    public bool IsDeccelerating() {
+        Debug.Log("prev x: " + previousVelocity.x);
+        Debug.Log("actual x: " + velocity.x);
+        return Mathf.Abs(previousVelocity.x) > Mathf.Abs(velocity.x);
     }
 
     public void OnDashInput() {
@@ -226,14 +236,8 @@ public class Player : MonoBehaviour {
         
         if (dashState == DashState.deccel) {
             if (dashFrame >= framesToDeccelDash) {
-                dashFrame = 0;
-                dashState = DashState.none;
+                EndDash();
 
-                if (directionalInputs.x == 0)
-                    velocity.x = 0;
-                else {
-                    velocity.x = moveSpeed * dashDirection;
-                }
             }
             else {
                 float diffPerFrame = (maxDashSpeed - moveSpeed) / framesToDeccelDash;
@@ -244,6 +248,17 @@ public class Player : MonoBehaviour {
                     velocity.x = Mathf.Min((maxDashSpeed - dashFrame * diffPerFrame) * dashDirection, dashDirection * moveSpeed);
                 dashFrame++;
             }
+        }
+    }
+
+    void EndDash() {
+        dashFrame = 0;
+        dashState = DashState.none;
+
+        if (directionalInputs.x == 0)
+            velocity.x = 0;
+        else {
+            velocity.x = moveSpeed * dashDirection;
         }
     }
 
@@ -287,7 +302,7 @@ public class Player : MonoBehaviour {
                 NormalWallJump();
 			}
             else if (directionalInputs.x == 0) {
-                SlowWallJump();
+                NormalWallJump();
             }
 			else {
                 FastWallJump();
@@ -329,6 +344,20 @@ public class Player : MonoBehaviour {
 		}
 	}
 	
+    public void EnterWallCollision() {
+        if (dashState != DashState.none)
+            EndDash();
+    }
+
+    public void ExitWallCollision() {
+
+    }
+
+    public void EnterGroundCollision() {
+        lastWallJump = WallJump.none;
+        Debug.Log("Touch Ground");
+    }
+
 	void HandleWallSliding() {
 		wallDirX = (controller.collisions.left) ? -1 : 1;
 		wallColliding = false;
@@ -374,20 +403,30 @@ public class Player : MonoBehaviour {
 	void CalculateVelocity() {
 
         float targetVelocityX = directionalInputs.x * moveSpeed;
+        ///If player is walljumping 
+        if (lastWallJump == WallJump.normal) {
+
+            if (IsDeccelerating()) {
+                Debug.Log("desacelerou");
+                lastWallJump = WallJump.none;
+            }
+            else {
+                Debug.Log("n desacelerou");
+            }
+
+            if (Mathf.Sign(targetVelocityX) != Mathf.Sign(velocity.x)) targetVelocityX = 0;
+
+        }
 
         if (dashState == DashState.none) {
             if (changeDirectionActualFrame <= 0 || velocity.y != 0) {
+
                 velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
                 changeDirectionActualFrame = 0;
             }
             else
                 changeDirectionActualFrame--;
 
-        }
-
-        float gravity = this.gravity;
-        if (velocity.y  < 0) {
-            //gravity *= 1.3f;
         }
 
         if (dashState == DashState.deccel || dashState == DashState.continuous) { 
@@ -399,5 +438,8 @@ public class Player : MonoBehaviour {
         if (velocity.y < -maxFallVelocity) {
             velocity.y = -maxFallVelocity;
         }
+
+
+
     }
 }

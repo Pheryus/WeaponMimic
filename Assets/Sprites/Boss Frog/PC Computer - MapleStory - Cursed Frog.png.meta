@@ -1,0 +1,2011 @@
+fileFormatVersion: 2
+guid: 45f1e50b42e7ad242b3a1b7d45fdf46f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1985800453207052064
+    second: PC Computer - MapleStory - Cursed Frog_0
+  - first:
+      213: 5482704233497849040
+    second: PC Computer - MapleStory - Cursed Frog_1
+  - first:
+      213: -4728910451268165431
+    second: PC Computer - MapleStory - Cursed Frog_2
+  - first:
+      213: 2745534135022485549
+    second: PC Computer - MapleStory - Cursed Frog_3
+  - first:
+      213: 1465629591844827531
+    second: PC Computer - MapleStory - Cursed Frog_4
+  - first:
+      213: 7102892564095224397
+    second: PC Computer - MapleStory - Cursed Frog_5
+  - first:
+      213: -749183644283827504
+    second: PC Computer - MapleStory - Cursed Frog_6
+  - first:
+      213: 5397332299204747805
+    second: PC Computer - MapleStory - Cursed Frog_7
+  - first:
+      213: 7538692321509398375
+    second: PC Computer - MapleStory - Cursed Frog_8
+  - first:
+      213: 2911548827996173597
+    second: PC Computer - MapleStory - Cursed Frog_9
+  - first:
+      213: 4950952659082171249
+    second: PC Computer - MapleStory - Cursed Frog_10
+  - first:
+      213: 3757206923749906527
+    second: PC Computer - MapleStory - Cursed Frog_11
+  - first:
+      213: -7963395221151872863
+    second: PC Computer - MapleStory - Cursed Frog_12
+  - first:
+      213: 1168072512598921811
+    second: PC Computer - MapleStory - Cursed Frog_13
+  - first:
+      213: 7472046834089537216
+    second: PC Computer - MapleStory - Cursed Frog_14
+  - first:
+      213: 1006341713638096952
+    second: PC Computer - MapleStory - Cursed Frog_15
+  - first:
+      213: -9139840473784331593
+    second: PC Computer - MapleStory - Cursed Frog_16
+  - first:
+      213: -1302350748546796576
+    second: PC Computer - MapleStory - Cursed Frog_17
+  - first:
+      213: 5065646929023653287
+    second: PC Computer - MapleStory - Cursed Frog_18
+  - first:
+      213: 8782982090725887215
+    second: PC Computer - MapleStory - Cursed Frog_19
+  - first:
+      213: 600198378104865339
+    second: PC Computer - MapleStory - Cursed Frog_20
+  - first:
+      213: 4091787252256738186
+    second: PC Computer - MapleStory - Cursed Frog_21
+  - first:
+      213: 513961281017239485
+    second: PC Computer - MapleStory - Cursed Frog_22
+  - first:
+      213: -1773673244876280826
+    second: PC Computer - MapleStory - Cursed Frog_23
+  - first:
+      213: -6726522812152044452
+    second: PC Computer - MapleStory - Cursed Frog_24
+  - first:
+      213: -7786140743744933904
+    second: PC Computer - MapleStory - Cursed Frog_25
+  - first:
+      213: -6866848976295018060
+    second: PC Computer - MapleStory - Cursed Frog_26
+  - first:
+      213: -4812495333032109923
+    second: PC Computer - MapleStory - Cursed Frog_27
+  - first:
+      213: 2136050434956666101
+    second: PC Computer - MapleStory - Cursed Frog_28
+  - first:
+      213: -1516746673237593784
+    second: PC Computer - MapleStory - Cursed Frog_29
+  - first:
+      213: -2643281238399896449
+    second: PC Computer - MapleStory - Cursed Frog_30
+  - first:
+      213: -1717114635487648429
+    second: PC Computer - MapleStory - Cursed Frog_31
+  - first:
+      213: 5158412227458243130
+    second: PC Computer - MapleStory - Cursed Frog_32
+  - first:
+      213: -5201778746337606821
+    second: PC Computer - MapleStory - Cursed Frog_33
+  - first:
+      213: 4080275469752565013
+    second: PC Computer - MapleStory - Cursed Frog_34
+  - first:
+      213: 1196279850603050039
+    second: PC Computer - MapleStory - Cursed Frog_35
+  - first:
+      213: -7847678696424049636
+    second: PC Computer - MapleStory - Cursed Frog_36
+  - first:
+      213: -6125245059545268367
+    second: PC Computer - MapleStory - Cursed Frog_37
+  - first:
+      213: 5444671512144172812
+    second: PC Computer - MapleStory - Cursed Frog_38
+  - first:
+      213: -5830022844924396140
+    second: PC Computer - MapleStory - Cursed Frog_39
+  - first:
+      213: -3886413669263074587
+    second: PC Computer - MapleStory - Cursed Frog_40
+  - first:
+      213: -3564062914501944537
+    second: PC Computer - MapleStory - Cursed Frog_41
+  - first:
+      213: -7229523016904030773
+    second: PC Computer - MapleStory - Cursed Frog_42
+  - first:
+      213: 3252171005930737717
+    second: PC Computer - MapleStory - Cursed Frog_43
+  - first:
+      213: -150122876729745554
+    second: PC Computer - MapleStory - Cursed Frog_44
+  - first:
+      213: 7405092228340263631
+    second: PC Computer - MapleStory - Cursed Frog_45
+  - first:
+      213: -396979133669061548
+    second: PC Computer - MapleStory - Cursed Frog_46
+  - first:
+      213: -7077008948532996844
+    second: PC Computer - MapleStory - Cursed Frog_47
+  - first:
+      213: 7211536238685776117
+    second: PC Computer - MapleStory - Cursed Frog_48
+  - first:
+      213: 1639982515177588039
+    second: PC Computer - MapleStory - Cursed Frog_49
+  - first:
+      213: 7220425208800553049
+    second: PC Computer - MapleStory - Cursed Frog_50
+  - first:
+      213: 3528271054412460707
+    second: PC Computer - MapleStory - Cursed Frog_51
+  - first:
+      213: 8264273775263193780
+    second: PC Computer - MapleStory - Cursed Frog_52
+  - first:
+      213: 1848779749541150397
+    second: PC Computer - MapleStory - Cursed Frog_53
+  - first:
+      213: -3958897110559499265
+    second: PC Computer - MapleStory - Cursed Frog_54
+  - first:
+      213: -5519882539967891967
+    second: PC Computer - MapleStory - Cursed Frog_55
+  - first:
+      213: -5850262576658829629
+    second: PC Computer - MapleStory - Cursed Frog_56
+  - first:
+      213: -5722295305061443670
+    second: PC Computer - MapleStory - Cursed Frog_57
+  - first:
+      213: -6643043334825253905
+    second: PC Computer - MapleStory - Cursed Frog_58
+  - first:
+      213: -3894210106306521005
+    second: PC Computer - MapleStory - Cursed Frog_59
+  - first:
+      213: 5489089498926115491
+    second: PC Computer - MapleStory - Cursed Frog_60
+  - first:
+      213: 6858892533822096688
+    second: PC Computer - MapleStory - Cursed Frog_61
+  - first:
+      213: 2037408068966104221
+    second: PC Computer - MapleStory - Cursed Frog_62
+  - first:
+      213: 8108463740098438209
+    second: PC Computer - MapleStory - Cursed Frog_63
+  - first:
+      213: -7521582585956257459
+    second: PC Computer - MapleStory - Cursed Frog_64
+  - first:
+      213: -1659061764328752036
+    second: PC Computer - MapleStory - Cursed Frog_65
+  - first:
+      213: -8384518649696498365
+    second: PC Computer - MapleStory - Cursed Frog_66
+  - first:
+      213: 5200359742094995307
+    second: PC Computer - MapleStory - Cursed Frog_67
+  - first:
+      213: 6313239524310230882
+    second: PC Computer - MapleStory - Cursed Frog_68
+  - first:
+      213: 6517006044320521692
+    second: PC Computer - MapleStory - Cursed Frog_69
+  - first:
+      213: 5916208567005823248
+    second: PC Computer - MapleStory - Cursed Frog_70
+  - first:
+      213: 7006367760391803071
+    second: PC Computer - MapleStory - Cursed Frog_71
+  - first:
+      213: -2813792394672067104
+    second: PC Computer - MapleStory - Cursed Frog_72
+  - first:
+      213: 3599680347308299960
+    second: PC Computer - MapleStory - Cursed Frog_73
+  - first:
+      213: -8511956509689533012
+    second: PC Computer - MapleStory - Cursed Frog_74
+  - first:
+      213: 6528888168178070917
+    second: PC Computer - MapleStory - Cursed Frog_75
+  - first:
+      213: 8270894831123496033
+    second: PC Computer - MapleStory - Cursed Frog_76
+  - first:
+      213: -4611309896676916185
+    second: PC Computer - MapleStory - Cursed Frog_77
+  - first:
+      213: -8761425818679657560
+    second: PC Computer - MapleStory - Cursed Frog_78
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 633
+        width: 125
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c187d7e62499498478d5e23066385bce
+      internalID: 1985800453207052064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 633
+        width: 127
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ed977034ec3b442aec18caa0a9fce3
+      internalID: 5482704233497849040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 633
+        width: 128
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00cec1534948b0e4b935afc20c7c8150
+      internalID: -4728910451268165431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_3
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 633
+        width: 129
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73de6dc63ab264344964a1f0f5868cea
+      internalID: 2745534135022485549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_4
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 633
+        width: 128
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78ca6c65f7754b42a893c9998a43467
+      internalID: 1465629591844827531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_5
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 633
+        width: 127
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759a7e27578d325499c63d3f8b1596a3
+      internalID: 7102892564095224397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 512
+        width: 126
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004418d798b4f044c88b2733287a25a7
+      internalID: -749183644283827504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 514
+        width: 127
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644d81ebe0d8b9d41848131ce8844827
+      internalID: 5397332299204747805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_8
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 514
+        width: 127
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eeb26b0b733e84d9abdd6ee5535624
+      internalID: 7538692321509398375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 512
+        width: 132
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c2fb1f954416e49a138ce951a48eb0
+      internalID: 2911548827996173597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_10
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 511
+        width: 127
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89aa17dc4dbf00442972275922fe0132
+      internalID: 4950952659082171249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_11
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 510
+        width: 124
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cbac47607b9ac45b7307f7e1654803
+      internalID: 3757206923749906527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 391
+        width: 125
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc80dea13ffb7154a95daf9548854177
+      internalID: -7963395221151872863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_13
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 391
+        width: 127
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77d9a58264b24d4fb49ca99080282cc
+      internalID: 1168072512598921811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_14
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 391
+        width: 129
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511739e3108ce73479d37abf401894b2
+      internalID: 7472046834089537216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_15
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 391
+        width: 167
+        height: 93
+      alignment: 9
+      pivot: {x: 0.5819351, y: 0.43030638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7d8f5e461cb8544b64edb701064467
+      internalID: 1006341713638096952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_16
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 391
+        width: 283
+        height: 91
+      alignment: 9
+      pivot: {x: 0.74429697, y: 0.46043044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb9f8ff695db0144b532f9dd5d16704
+      internalID: -9139840473784331593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_17
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 391
+        width: 237
+        height: 93
+      alignment: 9
+      pivot: {x: 0.71574616, y: 0.5154875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b5bc13218e9ef4a8ef25486a11b5f8
+      internalID: -1302350748546796576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_18
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 391
+        width: 168
+        height: 105
+      alignment: 9
+      pivot: {x: 0.6286018, y: 0.5205761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e72ab4d3a2a0634c9a2d51636ade3df
+      internalID: 5065646929023653287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_19
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 391
+        width: 127
+        height: 106
+      alignment: 9
+      pivot: {x: 0.53969496, y: 0.5135881}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad84ac995836cab4e86fc56ce6327d93
+      internalID: 8782982090725887215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_20
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 391
+        width: 123
+        height: 108
+      alignment: 9
+      pivot: {x: 0.52323174, y: 0.5133362}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab580ebabe4aa647acf143ae733011d
+      internalID: 600198378104865339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_21
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 391
+        width: 125
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae462284fbf21c749b8a2a8454b94d2d
+      internalID: 4091787252256738186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_22
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 302
+        width: 66
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0683927c2fc46641b17467b5a1d6a08
+      internalID: 513961281017239485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_23
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 357
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb16c2bffabf628468397fea335601fc
+      internalID: -1773673244876280826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_24
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 362
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320af46a214c2294dae374f7324ef1b6
+      internalID: -6726522812152044452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_25
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 360
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698b6f0ee9f72574c91efaedd3d9448b
+      internalID: -7786140743744933904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_26
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 364
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12759e6a6bfcbab498000760e77f039c
+      internalID: -6866848976295018060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_27
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 300
+        width: 61
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a8340a279c8bd4e8ea760782d6de5d
+      internalID: -4812495333032109923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_28
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 328
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35b60bfdad529e45b1e4da0e90d960d
+      internalID: 2136050434956666101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_29
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 290
+        width: 52
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50654ab05b52a714ab6e0c167b80b2ec
+      internalID: -1516746673237593784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_30
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 298
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4655e71fbe69ad94ab18e6863197f213
+      internalID: -2643281238399896449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_31
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 318
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527f323e97406a74dad399cf1ca95f9c
+      internalID: -1717114635487648429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_32
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 309
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d1f415e4f571f47930ba8e74f4cd9f
+      internalID: 5158412227458243130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_33
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 306
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387dc0a62814f3a4195c7f66176aa660
+      internalID: -5201778746337606821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_34
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 240
+        width: 55
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5eb3bcdfb063bc44826475bfecb65d9
+      internalID: 4080275469752565013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_35
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 161
+        width: 124
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05db8b8ddf9e4d94e863f8ab57944822
+      internalID: 1196279850603050039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_36
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 202
+        width: 55
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f938aefe31292f14bac870cc020cc660
+      internalID: -7847678696424049636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_37
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 202
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f860789434b3ef43888000d5cb75d5a
+      internalID: -6125245059545268367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_38
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 202
+        width: 61
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b58d8e2f9b424649b430e9087e8c9b0
+      internalID: 5444671512144172812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_39
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 181
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5123d7f99b3d0a74696f89c8fe4711b5
+      internalID: -5830022844924396140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_40
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 181
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81990ac5271aa724f8909e9c713322ed
+      internalID: -3886413669263074587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_41
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 181
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407abe081b41bbe42aff54fee0461504
+      internalID: -3564062914501944537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_42
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 181
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76df9554704f312468243d5e63a6096b
+      internalID: -7229523016904030773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_43
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 181
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ead5412b5ef864ca2ebcac2ab100f2
+      internalID: 3252171005930737717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_44
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 181
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab39217b9cb5f134c895a38f72a62ae1
+      internalID: -150122876729745554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_45
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 67
+        width: 131
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff6831f6d0aa8a448f9b7e9955c9b2d
+      internalID: 7405092228340263631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_46
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdf37e6f3c55bc419cb2aad58c69bf6
+      internalID: -396979133669061548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_47
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 129
+        width: 34
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4979b57d7080e0b43b5b3e0d5750aca7
+      internalID: -7077008948532996844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_48
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 133
+        width: 59
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c5715546bdb9644b8bca44b5c7db46
+      internalID: 7211536238685776117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_49
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 21
+        width: 121
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a31e241de02ab48b41ea15c38c04c0
+      internalID: 1639982515177588039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_50
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 21
+        width: 121
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f353d2d221df1834cb649af54ae34ce9
+      internalID: 7220425208800553049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_51
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 21
+        width: 121
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00890f3ad540a48408a9e104ce2b8b92
+      internalID: 3528271054412460707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_52
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 21
+        width: 135
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fd67abcd8a3a846b4e4d4bbe7dced4
+      internalID: 8264273775263193780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_53
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 16
+        width: 147
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63a07ded10a95f4d81632f169584c0c
+      internalID: 1848779749541150397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_54
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 16
+        width: 166
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc2f0622dd2173498d9f66e5ca73ac3
+      internalID: -3958897110559499265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_55
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 133
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57589fc6cf45763438bc7cdca22a49d7
+      internalID: -5519882539967891967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_56
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 100
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2aeec0ad882a649b4fdceaa313cf08
+      internalID: -5850262576658829629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_57
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 38
+        width: 57
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a544ed300fbbd3942bfb3c88e58d6c3d
+      internalID: -5722295305061443670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_58
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 125
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6c32f7e45791141a137d7a93226e3c
+      internalID: -6643043334825253905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_59
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 91
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9405795486f8e46973b3ae2f7cc477
+      internalID: -3894210106306521005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_60
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 98
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f8e2612bde37b44b3cb6ff4e0b6fb9
+      internalID: 5489089498926115491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_61
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 54
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599ee269e40093d4c8db9c962f36a6e9
+      internalID: 6858892533822096688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_62
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 70
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a36e6858214b3748a783c62814ccb72
+      internalID: 2037408068966104221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_63
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 63
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d0b54dc9e6b54f80eacca2424a036
+      internalID: 8108463740098438209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_64
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 12
+        width: 88
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd5c6d337c127a46a2480715c48bc8d
+      internalID: -7521582585956257459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_65
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 26
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b38ef1ed8fbfa499378ca325830bcd
+      internalID: -1659061764328752036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_66
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 10
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8273d4f7e71f824b9d43de3e1fd254c
+      internalID: -8384518649696498365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_67
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 17
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c558a3c278dbf0a42bfa6424ff2f9aab
+      internalID: 5200359742094995307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_68
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 33
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfdd4bbe09e60f489858633e46eb1a8
+      internalID: 6313239524310230882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_69
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 17
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0429794ce8634d40a14b3feda66565d
+      internalID: 6517006044320521692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_70
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 31
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcbbafce583df44c99aea2061cab51c
+      internalID: 5916208567005823248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_71
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 17
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefcd6fad0296af45872e42c63b18732
+      internalID: 7006367760391803071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_72
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 29
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30add0bb041fb84e8392cb31e5ce724
+      internalID: -2813792394672067104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_73
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 17
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949e895157b7a1847bd48aaf2ca93b3f
+      internalID: 3599680347308299960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_74
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 27
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6b83be804341c489c9f43c11fef6f1
+      internalID: -8511956509689533012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_75
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 17
+        width: 33
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a3c170b8c08d847a0a7796157d9dba
+      internalID: 6528888168178070917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_76
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 12
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54efb881c988c14f9a662849525b3f7
+      internalID: 8270894831123496033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_77
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279a0ecf71206d44ebd09cedc5607798
+      internalID: -4611309896676916185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - MapleStory - Cursed Frog_78
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 5
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7464edf9e56984a8d3c7c2476b9234
+      internalID: -8761425818679657560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

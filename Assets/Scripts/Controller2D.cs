@@ -48,9 +48,11 @@ public class Controller2D : RaycastController {
 		if (standingOnPlatform) {
 			collisions.below = true;
 		}
-	}
 
-	void HorizontalCollisions(ref Vector2 moveAmount) {
+        collisions.isOnGround = collisions.below;
+    }
+
+    void HorizontalCollisions(ref Vector2 moveAmount) {
 		float directionX = collisions.faceDir;
 		float rayLength = Mathf.Abs (moveAmount.x) + skinWidth;
 
@@ -83,8 +85,14 @@ public class Controller2D : RaycastController {
 				moveAmount.x = (hit.distance - skinWidth) * directionX;
 				rayLength = hit.distance;
 
+                bool wasCollidingLeft = collisions.left;
+                bool wasCollidingRight = collisions.right;
+
 				collisions.left = directionX == -1;
 				collisions.right = directionX == 1;
+
+                if ((!wasCollidingLeft && collisions.left) || (!wasCollidingRight && collisions.right))
+                    StartHorizontalCollision();
 			}
 		}
 
@@ -92,9 +100,23 @@ public class Controller2D : RaycastController {
             wallCollision = false;
 	}
 
+    void StartHorizontalCollision() {
+        if (GetComponent<Player>() != null) {
+            GetComponent<Player>().EnterWallCollision();
+        }
+    }
+
+    void StartGroundCollision() {
+        if (GetComponent<Player>() != null) {
+            GetComponent<Player>().EnterGroundCollision();
+        }
+    }
+
 	void VerticalCollisions(ref Vector2 moveAmount) {
 		float directionY = Mathf.Sign (moveAmount.y);
 		float rayLength = Mathf.Abs (moveAmount.y) + skinWidth;
+
+        bool groundCollision = false;
 
 		for (int i = 0; i < verticalRayCount; i ++) {
 
@@ -126,12 +148,18 @@ public class Controller2D : RaycastController {
 					moveAmount.x = moveAmount.y / Mathf.Tan(collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(moveAmount.x);
 				}
 
-				collisions.below = directionY == -1;
+                bool wasCollidingBelow = collisions.isOnGround;
+                collisions.below = directionY == -1;
 				collisions.above = directionY == 1;
-			}
+
+                if (!wasCollidingBelow && collisions.below && !groundCollision) {
+                    groundCollision = true;
+                    StartGroundCollision();
+                }
+            }
 		}
 
-		if (collisions.climbingSlope) {
+        if (collisions.climbingSlope) {
 			float directionX = Mathf.Sign(moveAmount.x);
 			rayLength = Mathf.Abs(moveAmount.x) + skinWidth;
 			Vector2 rayOrigin = ((directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight) + Vector2.up * moveAmount.y;
@@ -216,9 +244,11 @@ public class Controller2D : RaycastController {
 		collisions.fallingThroughPlatform = false;
 	}
 
-	public struct CollisionInfo {
-		public bool above, below;
-		public bool left, right;
+    public struct CollisionInfo {
+        public bool above, below;
+
+        public bool isOnGround;
+        public bool right, left;
 
 		public bool climbingSlope;
 		public bool descendingSlope;

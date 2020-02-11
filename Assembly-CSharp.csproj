@@ -65,6 +65,11 @@
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Controller2D.cs" />
     <Compile Include="Assets\Scripts\DebugControl.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BaseEnemyAction.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\HeuristicFunction.cs" />
+    <Compile Include="Assets\Scripts\Enemies\TongueAttack.cs" />
+    <Compile Include="Assets\Scripts\FrameChecker.cs" />
     <Compile Include="Assets\Scripts\PlatformController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
