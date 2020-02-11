@@ -4,7 +4,20 @@ using UnityEngine;
 
 
 public class BaseEnemyAction : MonoBehaviour {
-    public int frames;
+
+	[Header("Heuristic")]
+
+	[SerializeField]
+	public List<Condition> conditions;
+
+	public float value;
+
+	public float GetHeuristicValue() {
+		return value;
+	}
+
+	[Header ("Action")]
+	public int frames;
 
     public string actionAnimationName;
 
@@ -12,9 +25,7 @@ public class BaseEnemyAction : MonoBehaviour {
 
     public string actionName;
 
-	[SerializeField]
-	public HeuristicFunction heuristic;
-    
+
     public FrameChecker actionFrameChecker;
 
     public AnimationClipExtended animationClip;

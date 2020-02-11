@@ -27,8 +27,8 @@ public class EnemyAI : MonoBehaviour {
         float heuristicValue = 0.1f;
         
         foreach (BaseEnemyAction be in baseEnemyAttack) {
-             if (heuristicValue < be.heuristic.GetHeuristicValue()) {
-                heuristicValue = be.heuristic.GetHeuristicValue();
+             if (heuristicValue < be.GetHeuristicValue()) {
+                heuristicValue = be.GetHeuristicValue();
                 bestAction = be;
             }
         }
