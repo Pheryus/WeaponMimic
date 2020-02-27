@@ -28,7 +28,9 @@ public class SpritesheetEditor : EditorWindow {
            
         for (int i = 0; i < sprites.Length; i++) {
             Debug.Log(ti.spritesheet[i].pivot);
-            sprites[i].pivot = new Vector2(0.6f, 0.48f);
+            sprites[i].pivot = new Vector2(offset.x, offset.y);
+            Debug.Log(sprites[i].pivot);
+
             Debug.Log("name: " + ti.spritesheet[i].name);
         }
 
@@ -44,10 +46,13 @@ public class SpritesheetEditor : EditorWindow {
 
 
     void OpenFileSearch() {
-        spriteName = "Assets/Sprites/Player/Protag_Run.png"; //EditorUtility.OpenFilePanel("", "C:/Github/MimicWeapon/Assets/Sprites", "");
+        spriteName = "Assets/Sprites/Player/Protag_Jump.png"; //EditorUtility.OpenFilePanel("", "C:/Github/MimicWeapon/Assets/Sprites", "");
     }
 
     private void OnGUI() {
+
+        offset.x = EditorGUILayout.FloatField("x:", offset.x);
+        offset.y = EditorGUILayout.FloatField("y:", offset.y);
 
         if (GUILayout.Button("LoadSprites")) {
             OpenFileSearch();

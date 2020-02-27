@@ -17,22 +17,32 @@ public class Player : MonoBehaviour {
 	public float minJumpHeight = 1;
 	public float timeToJumpApex = .4f;
 
-
-    [Range(0,1)]
-    public float doubleJumpStrength;
-
-    float accelerationTimeAirborne = .2f;
-    float accelerationTimeGrounded = .05f;
+    public float maxHighJumpWithoutStun;
 
     float gravity;
     float maxJumpVelocity;
     float minJumpVelocity;
     public float maxFallVelocity;
+    [Range(0,1)]
+    public float doubleJumpStrength;
+
 
     public int framesToJumpAfterLeaveGround;
     int actualFrameLeaveGround;
-
+    float startJumpY, endJumpY;
     bool canDoubleJump;
+
+    #endregion
+
+    #region Decceleration
+
+    [Header("Decceleration")]
+    [Range(0, .5f)]
+    public float accelerationTimeAirborne = .2f;
+    [Range (0, .5f)]
+    public float accelerationTimeGrounded = .05f;
+    [Range(0, .5f)]
+    public float accelerationTImeGroundedAttacking = .05f;
 
     #endregion
 
@@ -75,9 +85,9 @@ public class Player : MonoBehaviour {
     public bool decceleratesInDash;
     bool canDash = true;
     bool onDashCooldown;
-    DashState dashState;
+    public DashState dashState;
     int dashDirection;
-    enum DashState { none, accel, continuous, deccel };
+    public enum DashState { none, accel, continuous, deccel };
     float actualDashSpeed;
     Vector3 dashDistance = Vector3.zero;
 
@@ -105,18 +115,20 @@ public class Player : MonoBehaviour {
 
     int playerDirection = 1;
 
+    PlayerAnimation playerAnimation;
     PlayerGhost playerGhost;
-
+    PlayerAttack playerAttack;
     Vector2 previousVelocity;
 
 	void Start() {
+        playerAnimation = GetComponent<PlayerAnimation>();
+        playerAttack = GetComponent<PlayerAttack>();
 		controller = GetComponent<Controller2D> ();
         playerGhost = GetComponent<PlayerGhost>();
 		gravity = -(2 * maxJumpHeight) / Mathf.Pow (timeToJumpApex, 2);
 		maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 		minJumpVelocity = Mathf.Sqrt (2 * Mathf.Abs (gravity) * minJumpHeight);
 	}
-
 
     public void UpdatePhysics() {
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
@@ -125,7 +137,6 @@ public class Player : MonoBehaviour {
     }
 
 	void Update() {
-
 
         CalculateVelocity();
         CalculateDashVelocity();
@@ -180,10 +191,17 @@ public class Player : MonoBehaviour {
     public void OnDashInput() {
         if (dashState == DashState.none && canDash && !onDashCooldown && learnDash) {
             playerGhost.CreateGhost();
+
+            if (playerAttack.onAttack)
+                playerAttack.BreakCombo();
+            else
+                playerAttack.RefreshFrameCombo();
+
             dashState = DashState.accel;
             dashDirection = playerDirection;
             velocity = Vector2.zero;
             onDashCooldown = true;
+            playerAnimation.StartDash();
             dashFrame = 0;
             canDash = false;
             dashDistance = transform.position;
@@ -261,8 +279,10 @@ public class Player : MonoBehaviour {
     }
 
 	public void SetDirectionalInput (List<Vector2> input) {
+
+
 		directionalInputs = input[input.Count - 1];
-        if (dashState == DashState.none) {
+        if (dashState == DashState.none && CanAct()) {
             if (directionalInputs.x > 0) {
                 if (playerDirection == -1) changeDirectionActualFrame = framesToStartChangeDirection;
                 
@@ -273,6 +293,10 @@ public class Player : MonoBehaviour {
                 playerDirection = -1;
             }
         }
+
+        if (!CanAct())
+            directionalInputs.x = 0;
+
         ChangeWallJump();        
     }
 
@@ -292,7 +316,10 @@ public class Player : MonoBehaviour {
     }
 
 	public void OnJumpInputDown() {
-		if (wallColliding) {
+        if (!CanAct())
+            return;
+
+        if (wallColliding) {
             lastWallJumpDirection = -wallDirX;
             actualFrameLastWallJump = frameWindowChangeWallJump;
 
@@ -307,12 +334,18 @@ public class Player : MonoBehaviour {
 			}
             return;
 		}
-		if (actualFrameLeaveGround > 0) {
-			velocity.y = maxJumpVelocity;
-		}
+
+        //First Jump
+        if (actualFrameLeaveGround > 0) {
+            velocity.y = maxJumpVelocity;
+            startJumpY = transform.position.y;
+            endJumpY = transform.position.y;
+        }
+        //Second Jump
         else if (learnDoubleJump && canDoubleJump) {
             canDoubleJump = false;
             velocity.y = maxJumpVelocity * doubleJumpStrength;
+            //playerAnimation.StartJump();
         }
 	}
 
@@ -337,10 +370,14 @@ public class Player : MonoBehaviour {
     }
 
 	public void OnJumpInputUp() {
-		if (velocity.y > minJumpVelocity) {
+		if (velocity.y > minJumpVelocity && CanAct()) {
 			velocity.y = minJumpVelocity;
 		}
 	}
+
+    bool CanAct() {
+        return !playerAttack.onAttack;
+    }
 	
     public void EnterWallCollision() {
         if (dashState != DashState.none)
@@ -353,7 +390,14 @@ public class Player : MonoBehaviour {
 
     public void EnterGroundCollision() {
         lastWallJump = WallJump.none;
-        Debug.Log("Touch Ground");
+        playerAnimation.OnGround();
+        /*
+        if (endJumpY - transform.position.y >= maxHighJumpWithoutStun) {
+            playerAnimation.FallStun();
+            endJumpY = transform.position.y;
+        }
+        else
+        */
     }
 
 	void HandleWallSliding() {
@@ -410,13 +454,19 @@ public class Player : MonoBehaviour {
         if (dashState == DashState.none) {
             if (changeDirectionActualFrame <= 0 || velocity.y != 0) {
 
-                velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
-                changeDirectionActualFrame = 0;
+                if (CanAct()) { 
+                    velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirborne);
+                    changeDirectionActualFrame = 0;
+                }
+                else if (playerAttack.onAttack && controller.collisions.below){
+                    velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, accelerationTImeGroundedAttacking);
+                }
             }
             else
                 changeDirectionActualFrame--;
 
         }
+        
 
         if (dashState == DashState.deccel || dashState == DashState.continuous) { 
 		    velocity.y += gravity * 0.5f * Time.deltaTime;
@@ -433,7 +483,8 @@ public class Player : MonoBehaviour {
 		} else {
 		}
 
-
+        if (endJumpY < transform.position.y)
+            endJumpY = transform.position.y;
 
 	}
 }
