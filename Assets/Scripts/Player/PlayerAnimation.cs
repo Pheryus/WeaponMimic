@@ -25,6 +25,7 @@ public class PlayerAnimation : MonoBehaviour
     public void StartDash() {
         state = AnimState.dash;
         anim.Play("Dash");
+        EndAttack();
     }
 
     public void StartJump() {
@@ -39,14 +40,18 @@ public class PlayerAnimation : MonoBehaviour
     public void JumpApex() {
         Debug.Log("Apex");
         state = AnimState.apexJump;
-        anim.Play("JumpApex");
+        if (!playerAttack.onAttack)
+            anim.Play("JumpApex");
     }
 
     public void Falling() {
-        EndAttack();
         state = AnimState.falling;
         anim.SetBool("OnGround", false);
-        anim.Play("Falling");
+
+        if (!playerAttack.onAttack){
+            Debug.Log("start");
+            anim.Play("Falling");
+        }
     }
 
     public void OnGround() {
@@ -62,10 +67,14 @@ public class PlayerAnimation : MonoBehaviour
     }
 
     void EndAttack() {
-        playerAttack.onAttack = false;
+        if (playerAttack.onAttack){
+            Debug.Log("End Attack");
+            playerAttack.onAttack = false;
+        }
     }
 
     public void EndAttackAnimation() {
+        Debug.Log("End Attack Animation");
         EndAttack();
         UpdateState();
     }
@@ -76,7 +85,6 @@ public class PlayerAnimation : MonoBehaviour
         else
             spriteRenderer.flipX = false;
     }
-
 
     public void FallStun() {
         Debug.Log("Fall Stun");

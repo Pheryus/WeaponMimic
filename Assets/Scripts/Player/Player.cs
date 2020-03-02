@@ -192,7 +192,7 @@ public class Player : MonoBehaviour {
         if (dashState == DashState.none && canDash && !onDashCooldown && learnDash) {
             playerGhost.CreateGhost();
 
-            if (playerAttack.onAttack)
+            if (playerAttack.onAttack && !playerAttack.attackSucessful)
                 playerAttack.BreakCombo();
             else
                 playerAttack.RefreshFrameCombo();
